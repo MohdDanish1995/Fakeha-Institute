@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home - Fakeha Ali Institute</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Reset & basic styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      background: url('https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWR1Y2F0aW9uJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      background: rgba(51, 51, 51, 0.9);
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .logo {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+    .nav-links li {
+      margin-left: 20px;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #f0a500;
+    }
+    /* Mobile hamburger */
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+    }
+    /* Hero Section */
+    .hero {
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero h1 {
+      color: #fff;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      color: #ddd;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 10px 30px;
+      background: #f0a500;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #d18e00;
+    }
+    /* Features Section */
+    .features {
+      padding: 50px 0;
+      background: rgba(255, 255, 255, 0.9);
+      text-align: center;
+    }
+    .features h2 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+    }
+    .feature-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    .feature-item {
+      flex: 1 1 300px;
+      margin: 15px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .feature-item i {
+      font-size: 2rem;
+      color: #f0a500;
+      margin-bottom: 10px;
+    }
+    footer {
+      background: rgba(51, 51, 51, 0.9);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 20px;
+    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        display: none;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="home.html" class="logo">Fakeha Ali Institute</a>
+        <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to Fakeha Ali Institute</h1>
+      <p>Empowering students through quality education and innovative learning methods.</p>
+      <a href="about.html" class="btn">Learn More</a>
+    </div>
+  </section>
+  <section class="features">
+    <div class="container">
+      <h2>Our Features</h2>
+      <div class="feature-items">
+        <div class="feature-item">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <h3>Expert Faculty</h3>
+          <p>Learn from industry experts and seasoned educators.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Modern Curriculum</h3>
+          <p>Stay ahead with courses designed for the modern world.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-globe"></i>
+          <h3>Global Exposure</h3>
+          <p>Gain international perspectives and opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>
+      &copy; 2025 Fakeha Ali Institute | 
+      <a href="https://facebook.com" style="color: #f0a500;">Facebook</a> | 
+      <a href="https://twitter.com" style="color: #f0a500;">Twitter</a>
+    </p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
